@@ -1,0 +1,20 @@
+package com.projetoEstoqueService;
+
+@Service
+public class EstoqueService {
+	
+	private final EstoqueRepository estoqueRepository;
+
+    public EstoqueService(EstoqueRepository estoqueRepository) {
+        this.estoqueRepository = estoqueRepository;
+    }
+
+    public List<DadosEstoque> listarInformacoesPaginadas(int pagina, int tamanhoPagina) {
+        Pageable pageable = PageRequest.of(pagina, tamanhoPagina); // Criação da informação de paginação
+
+        Page<DadosEstoque> dados = estoqueRepository.findAll(pageable); // Consulta paginada ao banco de dados
+
+        return dados.getContent(); // Retorna os dados da página consultada
+    }
+
+}

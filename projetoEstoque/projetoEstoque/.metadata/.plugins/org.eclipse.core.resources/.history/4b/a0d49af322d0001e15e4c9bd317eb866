@@ -1,0 +1,5 @@
+package com.projetoEstoqueFilaJMS;
+
+public class JmsTemplate {
+
+}

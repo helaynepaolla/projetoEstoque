@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+   <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+<dependencyManagement>
+<dependencies>    
+<dependency>
+    <groupId>org.apache.activemq</groupId>
+    <artifactId>activemq-broker</artifactId>
+    <version>${activemq.version}</version>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.activemq</groupId>
+    <artifactId>activemq-client</artifactId>
+    <version>${activemq.version}</version>
+</dependency>
+ </dependencies>
+</dependencyManagement>
